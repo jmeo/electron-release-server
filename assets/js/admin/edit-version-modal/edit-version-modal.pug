@@ -14,7 +14,11 @@ form(editable-form='', name='versionForm', onaftersave='acceptEdit()', e-role='f
       // Select Channel
       .form-group
         label.col-md-4.control-label Channel
-        .col-md-7 {{ version.channel.name || 'Not set' }}
+        .col-md-7 {{ version.channel.name || 'Not set' }} 
+      // forceupdate
+      .form-group
+        label.col-md-4.control-label(for="forceupdate") ForceUpdate
+        .col-md-7 {{ version.forceupdate == true ? 'Yes': 'No'}}
       // Availability Date
       .form-group
         label.col-md-4.control-label(for='availability') Availability Date

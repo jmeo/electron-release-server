@@ -146,6 +146,7 @@ module.exports = {
                 }
               }),
               flavor: results[2][index],
+              forceupdate: item.forceupdate,
               name: item.name,
               notes: item.notes,
               createdAt: item.createdAt,
@@ -286,6 +287,7 @@ module.exports = {
                 `/download/flavor/${flavor}/${latestVersion.name}/` +
                 latestVersion.assets[0].platform + '?filetype=zip'
               ),
+              forceupdate: latestVersion.forceupdate || false,
               name: latestVersion.name,
               notes: releaseNotes,
               pub_date: latestVersion.availability.toISOString()

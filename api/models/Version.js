@@ -38,6 +38,10 @@ module.exports = {
       defaultsTo: 'default'
     },
 
+    forceupdate: {
+      type: 'boolean'
+    },
+    
     notes: {
       type: 'string'
     }

@@ -50,6 +50,18 @@
             )
           hr
           span.help-block You will not be able to change the above later.
+      // forceupdate
+      .form-group
+        label.col-md-4.control-label(for="forceupdate") ForceUpdate
+        .col-md-7
+          .col-md-5
+            label
+              input(type="radio" name="forceupdate" ng-model="version.forceupdate" value="false")
+              span No
+          .col-md-5
+            label
+              input(type="radio" name="forceupdate" ng-model="version.forceupdate" value="true")
+              span Yes
       // Availability Date
       .form-group
         label.col-md-4.control-label(for='availability') Availability Date

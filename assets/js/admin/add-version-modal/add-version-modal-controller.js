@@ -4,10 +4,12 @@ angular.module('app.admin.add-version-modal', [])
       $scope.availableChannels = DataService.availableChannels;
       $scope.currentDateTime = moment().startOf('second').toDate();
       $scope.availableFlavors = DataService.availableFlavors;
-
+      console.log(DataService.availableFlavors)
+      $scope.forceUpdateData = 
       $scope.version = {
         name: '',
         notes: '',
+        forceupdate: false,
         channel: {
           name: DataService.availableChannels[0]
         },
@@ -36,6 +38,7 @@ angular.module('app.admin.add-version-modal', [])
         $scope.version = {
           name: '',
           notes: '',
+          forceupdate: false,
           channel: {
             name: DataService.availableChannels[0]
           },
